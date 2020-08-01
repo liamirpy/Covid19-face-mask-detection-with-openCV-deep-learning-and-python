@@ -23,7 +23,7 @@ def detect_face(image):
                 imag_[0, i, j, 0] = img[i, j, 0]
                 imag_[0, i, j, 1] = img[i, j, 1]
                 imag_[0, i, j, 2] = img[i, j, 2]
-        ####### PREDICTION OF HOLE LUNG
+        ####### PREDICTION
         pred_ = model_mask.predict(imag_[0:1, :, :, :], verbose=1)
         if pred_[0][0] > pred_[0][1]:
             print("With_mask")
